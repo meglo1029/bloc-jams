@@ -1,10 +1,10 @@
 *, *::before, *::after {
-     -moz-box-sizing: border-box;
-     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     box-sizing: border-box;
      box-sizing: border-box;
  } 
 
-html {
+   html {
      height: 100%; 
      font-size: 100%;
  }
@@ -25,8 +25,6 @@ html {
      position: relative; 
      left: 2rem;
  }
-
-   cursor: pointer;
  
  .navbar .links-container {
      display: table;
@@ -54,7 +52,6 @@ html {
      cursor: pointer;
  }
  
-   /* #5 */
  .links-container .navbar-link:hover {
      color: rgb(233,50,117);
  }

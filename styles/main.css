@@ -24,6 +24,7 @@
  .navbar .logo {
      position: relative; 
      left: 2rem;
+     cursor: pointer;
  }
  
  .navbar .links-container {

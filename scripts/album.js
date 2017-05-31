@@ -137,7 +137,7 @@ var getSongItem = function(element) {
          if (event.target.parentElement.className === 'album-view-song-item') {
             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
             var songItem = getSongItem(event.target);
-            if (songItem.getAttribute('data-song-number') !-- currentPlayingSong) {
+            if (songItem.getAttribute('data-song-number') !== currentPlayingSong) {
                 songItem.innerHTML = playButtonTemplate;
             }
          }
@@ -157,8 +157,6 @@ var getSongItem = function(element) {
      } 
  }
 
-
-
 var albums = [albumPicasso, albumMarconi, albumFuturama];
 var index = 1;
 albumImage.addEventListener("click", function(event){
@@ -166,6 +164,5 @@ albumImage.addEventListener("click", function(event){
     index++;
     if (index == albums.length) {
         index = 0;
-    }
-                               
-                            });
+    }                             
+});

@@ -69,8 +69,21 @@ var albumFuturama = {
 };
 var createSongRow = function(songNumber, songName, songLength) {
 	var template = '<tr class="album-view-song-item">' + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + songLength + '</td>' + '</tr>';
-    return $(template);
+    var $row = $(template);  
+    var onHover = function(event) {
+
+     };
+    
+    var offHover = function(event) {
+
+     
+     };
+    
+    $row.find('.song-item-number').click(clickHandler);
+    $row.hover(onHover, offHover);
+    return $row;
 };
+
 var $albumTitle = $('.album-view-title');
 var $albumArtist = $('.album-view-artist');
 var $albumReleaseInfo = $('.album-view-release-info');
@@ -175,7 +188,7 @@ var index = 1;
 //	}
 //});
 
-$("albumImage").on("click", function(){
+$("albumImage").click(function(){
     setCurrentAlbum(albums[index]);
 	index++;
 	if (index == albums.length) {

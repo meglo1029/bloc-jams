@@ -147,7 +147,7 @@ var currentlyPlayingSong = null;
 //		}
 //		return currentParent;
 //	}
-//};
+//}; 
 
  $(document).ready(function() {
 	setCurrentAlbum(albumPicasso);

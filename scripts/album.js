@@ -2,6 +2,7 @@ var getSongNumberCell = function(number) {
 	return $('.song-item-number[data-song-number="' + number + '"]');
 };
 var createSongRow = function(songNumber, songName, songLength) {
+<<<<<<< HEAD
 	var template = '<tr class="album-view-song-item">' + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + filterTimeCode(songLength) + '</td>' + '</tr>';
 	var $row = $(template);
 	var clickHandler = function() {
@@ -69,6 +70,18 @@ var setSong = function(songNumber) {
 var seek = function(time) {
 	if (currentSoundFile) {
 		currentSoundFile.setTime(time);
+=======
+	var template = '<tr class="album-view-song-item">' + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + songLength + '</td>' + '</tr>';
+    var $row = $(template);
+    return $(template);
+    
+    var clickHandler = function() {
+        var songNumber = $(this).attr('data-song-number');
+
+	if (currentlyPlayingSong !== null) {
+		var currentlyPlayingCell = $('.song-item-number[data-song-number="' + currentlyPlayingSong + '"]');
+		currentlyPlayingCell.html(currentlyPlayingSong);
+>>>>>>> checkpoint-17
 	}
 };
 var setVolume = function(volume) {

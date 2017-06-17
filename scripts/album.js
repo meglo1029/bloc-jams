@@ -128,7 +128,6 @@ var setCurrentAlbum = function(album) {
     
     subscribed = true;
     
-    
     $albumSongList.empty();
 	for (var i = 0; i < album.songs.length; i++) {
          var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);

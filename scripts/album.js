@@ -67,14 +67,12 @@ var albumFuturama = {
 		duration: '2:15'
 	}]
 };
+
 var createSongRow = function(songNumber, songName, songLength) {
 	var template = '<tr class="album-view-song-item">' + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>' + '  <td class="song-item-title">' + songName + '</td>' + '  <td class="song-item-duration">' + songLength + '</td>' + '</tr>';
     var $row = $(template);
-<<<<<<< HEAD
     return $(template);
     
-=======
->>>>>>> checkpoint-18
     var clickHandler = function() {
         var songNumber = $(this).attr('data-song-number');
 	   if (currentlyPlayingSong !== null) {
@@ -138,19 +136,6 @@ var setCurrentAlbum = function(album) {
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
 var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
 var currentlyPlayingSong = null;
-
-<<<<<<< HEAD
-//var findParentByClassName = function(element, targetClass) {
-//	if (element) {
-//		var currentParent = element.parentElement;
-//		while (currentParent.className !== targetClass && currentParent.className !== null) {
-//			currentParent = currentParent.parentElement;
-//		}
-//		return currentParent;
-//	}
-//};
-=======
->>>>>>> checkpoint-18
 
  $(document).ready(function() {
 	setCurrentAlbum(albumPicasso);

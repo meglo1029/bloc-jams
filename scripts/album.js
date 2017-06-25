@@ -303,6 +303,7 @@ var togglePlayFromPlayerbar = function() {
     }
 };
 
+
 $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
     setupSeekBars();

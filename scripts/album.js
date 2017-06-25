@@ -87,6 +87,7 @@ var createSongRow = function(songNumber, songName, songLength) {
 var setSong = function(songNumber) {
     if (currentSoundFile) {
         currentSoundFile.stop();
+        currentSoundFile.unbind('timeupdate');
     }
     
     currentlyPlayingSongNumber = parseInt(songNumber);
